@@ -1,0 +1,11 @@
+{
+  "name": "testworksconf-protractor-cucumber-workshop",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.3.1",
+    "ng-cart": "~1.0.0"
+  },
+  "devDependencies": {
+    "angular": "~1.4.3"
+  }
+}

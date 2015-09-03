@@ -1,0 +1,22 @@
+<div id="products" class="row" ng-controller="ProductController as ctrl">
+  <div class="alert alert-success" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only">Success:</span>
+    This item is in your cart. <a ng-click="ngCart.removeItemById(id)" style="cursor: pointer;">Remove</a>
+  </div>
+  <div class="col-md-3" ng-repeat="product in ctrl.products">
+    <div class="product">
+      <h3>{{product.name}}</h3>
+      <img ng-src="/images/products/{{product.image}}" alt="{{product.name}}" title="{{product.name}}" />
+      <p>{{product.description}}</p>
+      <h3 class="price">{{product.price | currency:"EUR "}}</h3>
+      <ngcart-addtocart
+        id="{{product.id}}"
+        name="{{product.name}}"
+        price="{{product.price}}"
+        quantity="1"
+        quantity-max="30"
+        data="product">Add to cart</ngcart-addtocart>
+    </div>
+  </div>
+</div>

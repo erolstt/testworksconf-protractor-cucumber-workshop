@@ -1,0 +1,18 @@
+- base project met:
+	- angular
+	- gulp
+	- protractor
+	- cucumberjs
+- define the tasks up front for running e2e tasks (gulp e2e)
+- zip file with the entire project + downloaded node_modules / bower_components
+
+Cucumber spec:
+	- provide a simple cucumber+protractor implemented spec
+	- provide a simple cucumber spec without the protractor implementation
+	- provide several cucumber scenario's with different difficulty levels
+
+
+
+Pre-requisites:
+	- node installed
+	- editor of choice
