@@ -8,5 +8,13 @@
   },
   "devDependencies": {
     "angular": "~1.4.5"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
   }
 }
