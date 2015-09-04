@@ -41,6 +41,10 @@ h1, h2, h3 {
   text-decoration: none;
 }
 
+.header a {
+  color: #ffffff;
+}
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
