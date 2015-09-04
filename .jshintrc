@@ -17,6 +17,7 @@
   "strict": true,
   "jquery": true,
   "globals": {
-    "angular": false
+    "angular": false,
+    "Product": false
   }
 }

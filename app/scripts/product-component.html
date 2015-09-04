@@ -1,9 +1,12 @@
 <div id="products" class="row" ng-controller="ProductController as ctrl">
-  <div class="alert alert-success" role="alert">
+  <div class="alert alert-success" role="alert" ng-show="ctrl.displayProductAddedAlert || ctrl.displayProductRemovedAlert">
     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
     <span class="sr-only">Success:</span>
-    This item is in your cart. <a ng-click="ngCart.removeItemById(id)" style="cursor: pointer;">Remove</a>
+    <span ng-show="ctrl.displayProductAddedAlert">This item is in your cart. <a ng-click="ctrl.removeProduct(id)" style="cursor: pointer;">Remove</a></span>
+    <span ng-show="ctrl.displayProductRemovedAlert">The item has been removed from your cart</span>
   </div>
+
+
   <div class="col-md-3" ng-repeat="product in ctrl.products">
     <div class="product">
       <h3>{{product.name}}</h3>
