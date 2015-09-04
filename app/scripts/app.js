@@ -1,3 +1,6 @@
 'use strict';
 
-angular.module('testworksconfWorkshop',['ngCart']);
+angular.module('testworksconfWorkshop',[
+  'ui.router',
+  'ngCart'
+]);

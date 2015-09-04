@@ -2,6 +2,7 @@
   "name": "testworksconf-protractor-cucumber-workshop",
   "private": true,
   "dependencies": {
+    "angular-ui-router": "~0.2.15",
     "bootstrap": "~3.3.1",
     "ng-cart": "~1.0.0"
   },
