@@ -4,6 +4,9 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
+var del = require('del');
+var fs = require('fs');
+var mkdirp = require('mkdirp');
 var reload = browserSync.reload;
 
 gulp.task('styles', function () {
@@ -112,3 +115,54 @@ gulp.task('build', ['jshint', 'html', 'images', 'fonts', 'extras'], function () 
 gulp.task('default', ['clean'], function () {
   gulp.start('build');
 });
+
+/*************** E2E setup *************/
+gulp.task('webdriver-update', $.protractor.webdriver_update);
+
+gulp.task('webdriver-standalone', $.protractor.webdriver_standalone);
+
+gulp.task('protractor-report', generateProtractorHtmlReport);
+
+gulp.task('clean-protractor-report', function (done) {
+  var dir = 'reports/';
+  if (fs.existsSync(dir)) {
+    del(dir + '**/*', done);
+  } else {
+    mkdirp(dir, done);
+  }
+});
+
+/***************Duplicated for windows OS*************/
+gulp.task('protractorwin', ['clean-protractor-report', 'default', 'webdriver-update'], runProtractor);
+
+gulp.task('e2ewin', ['protractorwin'], generateProtractorHtmlReport);
+/***************Duplicated for windows OS*************/
+
+gulp.task('protractor', ['clean-protractor-report', 'webdriver-update'], runProtractor);
+
+gulp.task('e2e', ['protractor'], generateProtractorHtmlReport);
+
+function runProtractor(done) {
+  gulp.src('e2e/features/**/*.feature')
+    .pipe($.protractor.protractor({
+      configFile: 'protractor.conf.js'
+    }))
+    .on('error', function (err) {
+      $.util.log(err.message);
+      done();
+    })
+    .on('end', function () {
+      done();
+    });
+}
+
+function generateProtractorHtmlReport() {
+  return gulp.src('reports/cucumber-test-results.json')
+    .pipe($.protractorCucumberHtmlReport({
+      dest: 'reports'
+    }))
+    .on('end', function () {
+      // Close browser sync server
+      browserSync.exit();
+    });
+}
