@@ -1,6 +1,6 @@
 module.exports = function () {
   this.AfterScenario(function (event, callback) {
-    browser.executeScript('window.sessionStorage.clear();');
+    browser.executeScript('window.localStorage.clear();');
     callback();
   });
 
