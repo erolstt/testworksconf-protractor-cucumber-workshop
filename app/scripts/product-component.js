@@ -10,7 +10,7 @@ function productComponent() {
   };
 }
 
-function ProductController($rootScope, $timeout, ngCart) {
+function ProductController($rootScope, ngCart) {
   var ctrl = this;
 
   ctrl.products = [
@@ -28,20 +28,12 @@ function ProductController($rootScope, $timeout, ngCart) {
   $rootScope.$on('ngCart:itemAdded', function () {
     ctrl.displayProductAddedAlert = true;
     ctrl.displayProductRemovedAlert = false;
-
-    $timeout(function () {
-      ctrl.displayProductAddedAlert = false;
-    }, 3000);
   });
 
   ctrl.displayProductRemovedAlert = false;
   $rootScope.$on('ngCart:itemRemoved', function () {
     ctrl.displayProductAddedAlert = false;
     ctrl.displayProductRemovedAlert = true;
-
-    $timeout(function () {
-      ctrl.displayProductRemovedAlert = false;
-    }, 3000);
   });
 
   ctrl.removeProduct = function (id) {
