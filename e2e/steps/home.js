@@ -1,6 +1,5 @@
-var page = require('../../pages/home'),
-data = require('../../data/home'),
-utils = require('../../support/utility-functions'),
+var page = require('../pages/home'),
+utils = require('../support/utility-functions'),
 chai = require('chai'),
 chaiAsPromised = require('chai-as-promised');
 
