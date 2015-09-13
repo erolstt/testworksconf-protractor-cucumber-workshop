@@ -14,8 +14,8 @@
 				C25.395,21.21,25.027,21.575,24.576,21.575L24.576,21.575z" fill="white"/>
 </svg>
     </div>
-    <div class="col-md-6">{{ ngCart.getTotalItems() }}
+    <div class="col-md-6"><span data-e2e-id="cart-summary-product-count">{{ ngCart.getTotalItems() }}</span>
         <ng-pluralize count="ngCart.getTotalItems()" when="{1: 'item', 'other':'items'}"></ng-pluralize>
-        <br />{{ ngCart.totalCost() | currency }}
+        <br /><span data-e2e-id="cart-summary-total-price">{{ ngCart.totalCost() | currency }}</span>
     </div>
 </div>
