@@ -45,7 +45,6 @@ function ProductController($rootScope, $timeout, ngCart) {
   });
 
   ctrl.removeProduct = function (id) {
-    console.log('remove');
     ngCart.removeItemById(id);
   };
 }
