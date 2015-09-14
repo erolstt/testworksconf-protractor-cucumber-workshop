@@ -10,7 +10,7 @@ function productComponent() {
   };
 }
 
-function ProductController($rootScope, ngCart) {
+function ProductController($scope, ngCart) {
   var ctrl = this;
 
   ctrl.products = [
@@ -25,15 +25,15 @@ function ProductController($rootScope, ngCart) {
   ];
 
   ctrl.displayProductAddedAlert = false;
-  $rootScope.$on('ngCart:itemAdded', function () {
+  $scope.$on('ngCart:itemAdded', function () {
     ctrl.displayProductAddedAlert = true;
-    ctrl.displayProductRemovedAlert = false;
+    ctrl.displayCheckoutSuccessfulAlert = false;
   });
 
-  ctrl.displayProductRemovedAlert = false;
-  $rootScope.$on('ngCart:itemRemoved', function () {
+  ctrl.displayCheckoutSuccessfulAlert = false;
+  $scope.$on('ngCart:itemRemoved', function () {
     ctrl.displayProductAddedAlert = false;
-    ctrl.displayProductRemovedAlert = true;
+    ctrl.displayCheckoutSuccessfulAlert = true;
   });
 
   ctrl.removeProduct = function (id) {
