@@ -4,5 +4,9 @@ module.exports = {
     browser.get(this.baseUrl);
     browser.executeScript('window.localStorage.clear();');
     browser.waitForAngular();
+  },
+  goToCart: function () {
+    browser.get(this.baseUrl + '/cart');
+    browser.waitForAngular();
   }
 };
