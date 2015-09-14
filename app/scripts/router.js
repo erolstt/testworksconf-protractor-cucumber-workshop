@@ -11,6 +11,8 @@ angular.module('testworksconfWorkshop')
       })
       .state('cart', {
         url: '/cart',
-        templateUrl: 'scripts/cart.html'
+        controller: 'ShoppingCartController',
+        controllerAs: 'ctrl',
+        templateUrl: 'scripts/shopping-cart.html'
       });
   });
