@@ -7,7 +7,7 @@ angular.module('testworksconfWorkshop')
     $stateProvider
       .state('main', {
         url: '/',
-        templateUrl: 'scripts/main.html'
+        templateUrl: 'scripts/home.html'
       })
       .state('cart', {
         url: '/cart',
