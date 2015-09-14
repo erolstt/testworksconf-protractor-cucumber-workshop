@@ -1,12 +1,14 @@
 /*global -$ */
 'use strict';
-// generated on 2015-08-05 using generator-gulp-webapp 0.3.0
+
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
+var proxy = require('proxy-middleware');
 var del = require('del');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
+var url = require('url');
 var reload = browserSync.reload;
 
 gulp.task('styles', function () {
@@ -73,11 +75,15 @@ gulp.task('extras', function () {
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', ['styles', 'fonts'], function () {
+  var proxyOptions = url.parse('http://localhost:3000/');
+  proxyOptions.route = '/api';
+
   browserSync({
     notify: false,
     port: 9000,
     server: {
       baseDir: ['.tmp', 'app'],
+      middleware: [proxy(proxyOptions)],
       routes: {
         '/bower_components': 'bower_components'
       }

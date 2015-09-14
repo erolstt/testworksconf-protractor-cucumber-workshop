@@ -35,6 +35,8 @@
     "mkdirp": "^0.5.1",
     "opn": "^1.0.0",
     "protractor": "^1.0.0",
+    "proxy-middleware": "^0.14.0",
+    "url": "^0.11.0",
     "wiredep": "^2.0.0"
   },
   "dependencies": {
