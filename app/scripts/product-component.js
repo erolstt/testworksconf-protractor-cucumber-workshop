@@ -14,7 +14,7 @@ function ProductController($scope, ngCart) {
   var ctrl = this;
 
   ctrl.products = [
-    new Product(1, 'Programming for Testers by Alan Richardson', 'Get out of your comfort zone and improve your Test Automation and programming skills in all phases of software development.', 'logo.svg', 1495),
+    new Product(1, 'Programming for Testers by Alan Richardson', 'Get out of your comfort zone and improve your Test Automation and programming skills ...', 'logo.svg', 1495),
     new Product(2, 'Testing 3.0', 'Are you ready for testing 3.0?', 'logo.svg', 795),
     new Product(3, 'Testing in AngularJS', 'In this training you will learn about writing and maintainable tests for AngularJS applications.', 'logo.svg', 695),
     new Product(4, 'Behaviour Driven Development with Cucumber', 'This training will help teams understand the true meaning of BDD and how to use Cucumber properly.', 'logo.svg', 695),

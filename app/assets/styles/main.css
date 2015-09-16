@@ -63,7 +63,7 @@ h1, h2, h3 {
 .product {
   height: 300px;
   display: block;
-  padding: 4px;
+  padding: 10px;
   margin-bottom: 21px;
   line-height: 1.42857143;
   background-color: #fff;
@@ -81,6 +81,8 @@ h1, h2, h3 {
 
 .product img {
   width: 60%;
+  margin-top: 5px;
+  margin-bottom: 20px;
 }
 
 .product .price {
@@ -106,6 +108,24 @@ h1, h2, h3 {
 .quantity-green {
   color: #06a99c;
   border-color: #06a99c;
+}
+
+.btn-spacer {
+  margin-left: 10px;
+}
+
+.quantity-spacer {
+  margin-right: 10px;
+}
+
+.wrapper {
+  position:relative;
+  padding-bottom: 35px;
+}
+
+.bottom {
+  position:absolute;
+  bottom:0;
 }
 
 /* Responsive: Portrait tablets and up */
