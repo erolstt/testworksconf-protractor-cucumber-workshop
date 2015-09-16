@@ -11,7 +11,7 @@ body {
 }
 
 h1, h2, h3 {
-  color: #44123c;
+  color: #444;
 }
 
 .header,
@@ -47,7 +47,6 @@ h1, h2, h3 {
 
 /* Custom page footer */
 .footer {
-  margin-top: 12px;
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
@@ -77,6 +76,7 @@ h1, h2, h3 {
 
 .product h3 {
   height: 50px;
+  color: #444;
 }
 
 .product img {
@@ -84,7 +84,28 @@ h1, h2, h3 {
 }
 
 .product .price {
-  color: #0000ff;
+  color: #6c1d5f;
+}
+
+.btn-green {
+  color: #fff;
+  background-color: #06a99c;
+  border-color: #06a99c;
+}
+
+.btn-green:hover {
+  border-radius: 2px;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(90deg, #06a99c, #07bdae);
+  background-image: linear-gradient(0deg, #06a99c, #07bdae);
+  text-shadow: 1px 1px 1px #069f93;
+  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.quantity-green {
+  color: #06a99c;
+  border-color: #06a99c;
 }
 
 /* Responsive: Portrait tablets and up */
