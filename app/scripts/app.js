@@ -2,5 +2,6 @@
 
 angular.module('testworksconfWorkshop',[
   'ui.router',
-  'ngCart'
+  'ngCart',
+  'cgBusy'
 ]);

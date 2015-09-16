@@ -1,4 +1,4 @@
-<div id="products" class="row" ng-controller="ProductController as ctrl">
+<div id="products" class="row" ng-controller="ProductController as ctrl" cg-busy="ctrl.loadingProducts">
   <div class="alert alert-success" role="alert" ng-show="ctrl.displayProductAddedAlert || ctrl.displayProductRemovedAlert">
     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
     <span class="sr-only">Success:</span>
