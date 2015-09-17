@@ -3,12 +3,18 @@
 function ShoppingCartController($scope, ngCart) {
   var ctrl = this;
 
-  ctrl.displayCheckoutSuccessfulAlert = false;
+  ctrl.checkoutSucceeded = false;
   $scope.$on('ngCart:checkout_succeeded', function () {
     ngCart.empty();
 
-    ctrl.displayCheckoutSuccessfulAlert = true;
+    ctrl.checkoutSucceeded = true;
   });
+
+  ctrl.hasItems = ngCart.getTotalUniqueItems();
+
+  $scope.$on('ngCart:change', function () {
+    ctrl.hasItems = ngCart.getTotalUniqueItems();
+  })
 }
 
 angular.module('testworksconfWorkshop')

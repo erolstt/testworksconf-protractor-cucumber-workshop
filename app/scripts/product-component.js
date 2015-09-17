@@ -26,13 +26,13 @@ function ProductController($scope, ngCart, $http) {
   ctrl.displayProductAddedAlert = false;
   $scope.$on('ngCart:itemAdded', function () {
     ctrl.displayProductAddedAlert = true;
-    ctrl.displayCheckoutSuccessfulAlert = false;
+    ctrl.checkoutSucceeded = false;
   });
 
-  ctrl.displayCheckoutSuccessfulAlert = false;
+  ctrl.checkoutSucceeded = false;
   $scope.$on('ngCart:itemRemoved', function () {
     ctrl.displayProductAddedAlert = false;
-    ctrl.displayCheckoutSuccessfulAlert = true;
+    ctrl.checkoutSucceeded = true;
   });
 }
 
