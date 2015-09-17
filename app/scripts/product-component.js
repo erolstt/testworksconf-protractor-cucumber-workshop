@@ -34,10 +34,6 @@ function ProductController($scope, ngCart, $http) {
     ctrl.displayProductAddedAlert = false;
     ctrl.displayCheckoutSuccessfulAlert = true;
   });
-
-  ctrl.removeProduct = function (id) {
-    ngCart.removeItemById(id);
-  };
 }
 
 angular.module('testworksconfWorkshop')
