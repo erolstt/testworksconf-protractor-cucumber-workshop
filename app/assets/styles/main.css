@@ -61,7 +61,7 @@ h1, h2, h3 {
 }
 
 .product {
-  height: 300px;
+  min-height: 350px;
   display: block;
   padding: 10px;
   margin-bottom: 21px;
@@ -75,7 +75,6 @@ h1, h2, h3 {
 }
 
 .product h3 {
-  height: 50px;
   color: #444;
 }
 
@@ -125,7 +124,6 @@ h1, h2, h3 {
 
 .bottom {
   position:absolute;
-  bottom:0;
 }
 
 /* Responsive: Portrait tablets and up */
