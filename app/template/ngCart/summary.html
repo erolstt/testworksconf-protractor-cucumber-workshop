@@ -16,6 +16,6 @@
     </div>
     <div class="col-sm-6"><span data-e2e-id="cart-summary-product-count">{{ ngCart.getTotalItems() }}</span>
         <ng-pluralize count="ngCart.getTotalItems()" when="{1: 'item', 'other':'items'}"></ng-pluralize>
-        <br /><span data-e2e-id="cart-summary-total-price">{{ ngCart.totalCost() | currency }}</span>
+        <br /><span data-e2e-id="cart-summary-total-price">{{ ngCart.totalCost() | currency:"€ " }}</span>
     </div>
 </div>
