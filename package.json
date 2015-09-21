@@ -9,7 +9,7 @@
     "browser-sync": "^1.8.2",
     "chai": "^3.1.0",
     "chai-as-promised": "^5.1.0",
-    "cucumber": "0.5.2",
+    "cucumber": "0.5.3",
     "del": "^1.1.1",
     "express": "^4.13.3",
     "fs": "0.0.2",
@@ -34,7 +34,7 @@
     "main-bower-files": "^2.5.0",
     "mkdirp": "^0.5.1",
     "opn": "^1.0.0",
-    "protractor": "^1.0.0",
+    "protractor": "^2.0.0",
     "proxy-middleware": "^0.14.0",
     "url": "^0.11.0",
     "wiredep": "^2.0.0"
