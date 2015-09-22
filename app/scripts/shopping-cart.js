@@ -14,7 +14,7 @@ function ShoppingCartController($scope, ngCart) {
 
   $scope.$on('ngCart:change', function () {
     ctrl.hasItems = ngCart.getTotalUniqueItems();
-  })
+  });
 }
 
 angular.module('testworksconfWorkshop')

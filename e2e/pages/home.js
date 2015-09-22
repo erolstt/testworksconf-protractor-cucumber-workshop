@@ -8,5 +8,10 @@ module.exports = {
   $addToCartButtons: element.all(by.className('btn-primary')),
   addProductToCart: function (index) {
     this.$addToCartButtons.get(index).click();
+  },
+  $selectProductQuantity: element(by.css('#quantity option')),
+  $selectProduct: element(by.repeater('product in ctrl.products')),
+  addProductWithQuantityToCart: function (product, quantity) {
+    this.$selectProduct.get(product).$selectProductQuantity.get(quantity).click();
   }
 };

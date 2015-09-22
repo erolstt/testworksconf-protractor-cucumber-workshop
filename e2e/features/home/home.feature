@@ -1,6 +1,6 @@
 Feature: Home
   As a training consumer
-  I want a product overview of all the available Xebia trainings
+  I want to add products to my shopping cart
   So that I can select a training I want to follow
 
   Scenario: It should display the cart summary in the header

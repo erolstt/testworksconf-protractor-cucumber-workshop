@@ -46,7 +46,7 @@ module.exports = function () {
   });
 
   this.Then(/^I should get a total price of all added products/, function (callback) {
-    expect(page.$cartSummaryTotalPrice.getText()).to.eventually.equal('$21.85').and.notify(callback);
+    expect(page.$cartSummaryTotalPrice.getText()).to.eventually.equal('€ 2,985.00').and.notify(callback);
   });
 
   this.Then(/^Only 1 of the product will be in my cart/, function (callback) {
