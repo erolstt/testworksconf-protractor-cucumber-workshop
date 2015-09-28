@@ -25,7 +25,7 @@ module.exports = function () {
     callback();
   });
 
-  this.When(/^I increase the quantity with (.+)/, function (quantity, callback) {
+  this.When(/^I increase the quantity with (.+)$/, function (quantity, callback) {
     utils.goToCart();
 
     cart.increaseProductQuantity(quantity, 0);
@@ -33,7 +33,7 @@ module.exports = function () {
     callback();
   });
 
-  this.Then(/^my cart should contain (.{1,2}) (.+) trainings/, function (quantity, productname, callback) {
+  this.Then(/^my cart should contain (.{1,2}) (.+) trainings$/, function (quantity, productname, callback) {
     utils.goToCart();
 
     var product = cart.getProduct(0);
@@ -59,7 +59,7 @@ module.exports = function () {
     callback();
   });
 
-  this.When(/^I decrease the quantity with (.+)/, function (quantity, callback) {
+  this.When(/^I decrease the quantity with (.+)$/, function (quantity, callback) {
     utils.goToCart();
 
     cart.decreaseProductQuantity(quantity, 0);
@@ -67,7 +67,7 @@ module.exports = function () {
     callback();
   });
 
-  this.Then(/^my cart should contain (.{1,2}) (.+) trainings/, function (quantity, productname, callback) {
+  this.Then(/^my cart should contain (.{1,2}) (.+) trainings$/, function (quantity, productname, callback) {
     utils.goToCart();
 
     var product = cart.getProduct(0);
@@ -93,7 +93,7 @@ module.exports = function () {
     callback();
   });
 
-  this.When(/^I increase the the quantity with (.+)/, function (quantity, callback) {
+  this.When(/^I increase the the quantity with (.+)$/, function (quantity, callback) {
     utils.goToCart();
 
     cart.increaseProductQuantity(quantity, 0);
@@ -101,7 +101,7 @@ module.exports = function () {
     callback();
   });
 
-  this.Then(/^the total price for the (.+) trainings should be (.+)/, function (productname, price, callback) {
+  this.Then(/^the total price for the (.+) trainings should be (.+)$/, function (productname, price, callback) {
     var product = cart.getProduct(0);
 
     expect(product.name.getText()).to.eventually.equals(productname);

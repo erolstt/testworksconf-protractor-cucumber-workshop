@@ -19,7 +19,7 @@ module.exports = function () {
     callback();
   });
 
-  this.When(/^I add one (.+) training to my cart/, function (productname, callback) {
+  this.When(/^I add one (.+) training to my cart$/, function (productname, callback) {
     var product = home.getProduct(productname);
 
     product.addToCartButton.click();
@@ -27,7 +27,7 @@ module.exports = function () {
     callback();
   });
 
-  this.Then(/^my cart should contain (.{1,2}) (.+) training/, function (quantity, productname, callback) {
+  this.Then(/^my cart should contain (.{1,2}) (.+) training$/, function (quantity, productname, callback) {
     utils.goToCart();
 
     var prod = cart.getProduct(0);
@@ -47,7 +47,7 @@ module.exports = function () {
     callback();
   });
 
-  this.When(/^I add (.{1,2}) (.+) trainings to my cart/, function (quantity, productname, callback) {
+  this.When(/^I add (.{1,2}) (.+) trainings to my cart$/, function (quantity, productname, callback) {
     var product = home.getProduct(productname);
     var number = quantity - 1;
 
@@ -58,7 +58,7 @@ module.exports = function () {
     callback();
   });
 
-  this.Then(/^my cart should contain (.{1,2}) (.+) trainings/, function (quantity, productname, callback) {
+  this.Then(/^my cart should contain (.{1,2}) (.+) trainings$/, function (quantity, productname, callback) {
     utils.goToCart();
 
     var product = cart.getProduct(0);
@@ -84,7 +84,7 @@ module.exports = function () {
     callback();
   });
 
-  this.When(/^I add (.{1,2}) (.+) trainings to my cart/, function (quantity, productname, callback) {
+  this.When(/^I add (.{1,2}) (.+) trainings to my cart$/, function (quantity, productname, callback) {
     var product = home.getProduct(productname);
     var number = quantity - 1;
 
@@ -94,7 +94,7 @@ module.exports = function () {
     callback();
   });
 
-  this.Then(/^my cart should contain (.{1,2}) (.+) and (.{1,2}) (.+) trainings/, function (quantityA, productnameA, quantityB, productnameB, callback) {
+  this.Then(/^my cart should contain (.{1,2}) (.+) and (.{1,2}) (.+) trainings$/, function (quantityA, productnameA, quantityB, productnameB, callback) {
     utils.goToCart();
 
     var productA = cart.getProduct(0);
@@ -125,7 +125,7 @@ module.exports = function () {
     callback();
   });
 
-  this.When(/^I try to add (.{1,2}) (.+) trainings to the cart/, function (quantity, productname, callback) {
+  this.When(/^I try to add (.{1,2}) (.+) trainings to the cart$/, function (quantity, productname, callback) {
     var product = home.getProduct(productname);
     var number = quantity - 1;
 
@@ -135,7 +135,7 @@ module.exports = function () {
     callback();
   });
 
-  this.Then(/^the cart should still contain only (.{1,2}) (.+) trainings/, function (quantity, productname, callback) {
+  this.Then(/^the cart should still contain only (.{1,2}) (.+) trainings$/, function (quantity, productname, callback) {
     utils.goToCart();
 
     var product = cart.getProduct(0);
@@ -154,13 +154,13 @@ module.exports = function () {
     callback();
   });
 
-  this.When(/^I add a new training to to my cart/, function (callback) {
+  this.When(/^I add a new training to to my cart$/, function (callback) {
     home.addProductToCart(0);
 
     callback();
   });
 
-  this.Then(/^I should receive a notification/, function (callback) {
+  this.Then(/^I should receive a notification$/, function (callback) {
     expect(home.$productAddedAlert.isDisplayed()).to.eventually.equal(true).and.notify(callback);
   });
 

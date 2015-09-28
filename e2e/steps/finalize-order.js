@@ -25,7 +25,7 @@ module.exports = function () {
     callback();
   });
 
-  this.When(/^I click the finalize button/, function (callback) {
+  this.When(/^I click the finalize button$/, function (callback) {
     utils.goToCart();
 
     cart.$finalizeButton.click();
@@ -33,7 +33,7 @@ module.exports = function () {
     callback();
   });
 
-  this.Then(/^I should receive an alert that my order is finalized/, function (callback) {
+  this.Then(/^I should receive a notification that my order is finalized$/, function (callback) {
     expect(cart.$orderPlacedAlert.isDisplayed()).to.eventually.equal(true).and.notify(callback);
   });
 
