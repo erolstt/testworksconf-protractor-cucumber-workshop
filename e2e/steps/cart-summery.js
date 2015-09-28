@@ -19,7 +19,7 @@ module.exports = function () {
     callback();
   });
 
-  this.When(/^I add (.{1,2}) (.+) trainings to my cart/, function (quantity, productname, callback) {
+  this.When(/^I add (.{1,2}) (.+) trainings to my cart$/, function (quantity, productname, callback) {
     var product = home.getProduct(productname);
     var number = quantity - 1;
 
@@ -29,7 +29,7 @@ module.exports = function () {
     callback();
   });
 
-  this.Then(/^the cart summery should show (.+) products/, function (quantity, callback) {
+  this.Then(/^the cart summery should show (.+) products$/, function (quantity, callback) {
     expect(home.$cartSummaryProductCount.getText()).to.eventually.equal(quantity).and.notify(callback);
   });
 
@@ -50,7 +50,7 @@ module.exports = function () {
     callback();
   });
 
-  this.When(/^I add (.{1,2}) (.+) trainings to my cart/, function (quantity, productname, callback) {
+  this.When(/^I add (.{1,2}) (.+) trainings to my cart$/, function (quantity, productname, callback) {
     var product = home.getProduct(productname);
     var number = quantity - 1;
 
@@ -60,7 +60,7 @@ module.exports = function () {
     callback();
   });
 
-  this.Then(/^the cart summery should show (.+) products/, function (quantity, callback) {
+  this.Then(/^the cart summery should show (.+) products$/, function (quantity, callback) {
     expect(home.$cartSummaryProductCount.getText()).to.eventually.equal(quantity).and.notify(callback);
   });
 
@@ -74,7 +74,7 @@ module.exports = function () {
     callback();
   });
 
-  this.When(/^I add (.{1,2}) (.+) trainings/, function (quantity, productname, callback) {
+  this.When(/^I add (.{1,2}) (.+) trainings$/, function (quantity, productname, callback) {
     var product = home.getProduct(productname);
     var number = quantity - 1;
 
@@ -84,7 +84,7 @@ module.exports = function () {
     callback();
   });
 
-  this.Then(/^the cart summery should show (.+) as a total price/, function (totalprice, callback) {
+  this.Then(/^the cart summery should show (.+) as a total price$/, function (totalprice, callback) {
     expect(home.$cartSummaryTotalPrice.getText()).to.eventually.equal(totalprice).and.notify(callback);
   });
 
@@ -104,7 +104,7 @@ module.exports = function () {
     callback();
   });
 
-  this.When(/^I add (.{1,2}) (.+) trainings/, function (quantity, productname, callback) {
+  this.When(/^I add (.{1,2}) (.+) trainings$/, function (quantity, productname, callback) {
     var product = home.getProduct(productname);
     var number = quantity - 1;
 
@@ -114,7 +114,7 @@ module.exports = function () {
     callback();
   });
 
-  this.Then(/^the cart summery should show (.+) as a total price/, function (totalprice, callback) {
+  this.Then(/^the cart summery should show (.+) as a total price$/, function (totalprice, callback) {
     expect(home.$cartSummaryTotalPrice.getText()).to.eventually.equal(totalprice).and.notify(callback);
   });
 
@@ -134,18 +134,18 @@ module.exports = function () {
     callback();
   });
 
-  this.When(/^I remove (.{1,2}) Testing in AngularJS trainings from the cart/, function (quantity, callback) {
+  this.When(/^I remove (.{1,2}) Testing in AngularJS trainings from the cart$/, function (quantity, callback) {
     utils.goToCart();
     cart.decreaseProductQuantity(quantity, 0);
 
     callback();
   });
 
-  this.Then(/^the cart summery should show (.+) as a total price/, function (totalprice, callback) {
+  this.Then(/^the cart summery should show (.+) as a total price$/, function (totalprice, callback) {
     expect(home.$cartSummaryTotalPrice.getText()).to.eventually.equal(totalprice).and.notify(callback);
   });
 
-  this.Then(/^the cart summery should show (.+) products/, function (quantity, callback) {
+  this.Then(/^the cart summery should show (.+) products$/, function (quantity, callback) {
     expect(home.$cartSummaryProductCount.getText()).to.eventually.equal(quantity).and.notify(callback);
   });
 
