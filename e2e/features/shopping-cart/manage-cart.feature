@@ -6,7 +6,7 @@ Feature: manage shopping cart content
   Scenario: increase the product quantity
     Given I have 12 Behaviour Driven Development with Cucumber trainings in my cart
     When I increase the quantity with 3
-    Then my cart should contain 9 Behaviour Driven Development with Cucumber trainings
+    Then my cart should contain 15 Behaviour Driven Development with Cucumber trainings
 
   Scenario: decrease the product quantity
     Given I have 4 Specification by Example trainings in my cart

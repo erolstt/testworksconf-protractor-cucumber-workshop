@@ -16,6 +16,16 @@ module.exports = {
       totalPrice: product.element(by.css("[data-e2e-id='cart-product'] td:nth-child(5)"))
     };
   },
+  getProductNew: function (name) {
+    var product = element(by.css("[data-product-name=\'" + name + "\']"));
+    return {
+      product: product,
+      name: product.element(by.css("[data-e2e-id='cart-product'] td:nth-child(2)")),
+      quantity: product.element(by.css("[data-e2e-id='cart-product'] td:nth-child(3)")),
+      totalPriceProduct: product.element(by.css("[data-e2e-id='cart-product'] td:nth-child(5)")),
+      removeProduct: product.element(by.css('[data-e2e-id="cart-remove-product"]'))
+    };
+  },
   $cartProducts: element.all(by.css('[data-e2e-id="cart-product"]')),
   decreaseProductQuantity: function (quantity, index) {
     var count = quantity;
