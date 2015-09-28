@@ -10,7 +10,7 @@ var expect = chai.expect;
 module.exports = function () {
 
   /**
-   * the cart summary should show the cumulative amount of the equal products in my shopping cart
+   * Scenario: the cart summary should show the cumulative amount of the equal products in my shopping cart
    */
 
   this.Given(/^I have an empty shopping cart$/, function (callback) {
@@ -35,7 +35,7 @@ module.exports = function () {
 
 
   /**
-   * the cart summary should show the cumulative amount of the different products in my shopping cart
+   * Scenario: the cart summary should show the cumulative amount of the different products in my shopping cart
    */
 
   this.Given(/^I have (.{1,2}) (.+) trainings in my cart$/, function (quantity, productname, callback) {
@@ -65,7 +65,7 @@ module.exports = function () {
   });
 
   /**
-   * the cart summary should show the cumulative price of the equal products in my shopping cart
+   * Scenario: the cart summary should show the cumulative price of the equal products in my shopping cart
    */
 
   this.Given(/^I have an empty shopping cart$/, function (callback) {
@@ -89,7 +89,7 @@ module.exports = function () {
   });
 
   /**
-   * the cart summary should show the cumulative price of the different products in my shopping cart
+   * Scenario: the cart summary should show the cumulative price of the different products in my shopping cart
    */
 
   this.Given(/^I have (.{1,2}) (.+) training in my cart$/, function (quantity, productname, callback) {
@@ -119,7 +119,7 @@ module.exports = function () {
   });
 
   /**
-   * the cart summery should show updated values after I remove products from my shopping cart
+   * Scenario: the cart summery should show updated values after I remove products from my shopping cart
    */
 
   this.Given(/^I have (.{1,2}) (.+) trainings in my cart$/, function (quantity, productname, callback) {

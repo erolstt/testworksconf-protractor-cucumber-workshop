@@ -10,7 +10,7 @@ var expect = chai.expect;
 module.exports = function () {
 
   /**
-   * add a single product to an empty shopping cart
+   * Scenario: add a single product to an empty shopping cart
    */
 
   this.Given(/^I have no trainings added to my cart$/, function (callback) {

@@ -39,8 +39,7 @@ module.exports = function () {
   this.When(/^I increase the quantity of the second product to 3/, function (callback) {
     utils.goToCart();
 
-    page.increaseProductQuantity(0);
-    page.increaseProductQuantity(0);
+    page.increaseProductQuantity(2);
 
     callback();
   });

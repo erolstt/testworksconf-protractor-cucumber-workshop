@@ -1,9 +1,6 @@
 'use strict';
 
 module.exports = {
-  increaseProductQuantity: function (index) {
-    this.$cartProducts.get(index).element(by.css('[data-e2e-id="cart-product-increase-quantity"]')).click();
-  },
   $cartProductTotalPrice: element(by.css('[data-e2e-id="cart-product-total-price"]')),
   $cartRemoveProductsButton: element.all(by.css('[data-e2e-id="cart-remove-product"]')),
   removeProductFromCart: function (index) {
@@ -26,6 +23,15 @@ module.exports = {
 
     while (count > 0) {
       product.element(by.css('[data-e2e-id="cart-product-decrease-quantity"]')).click();
+      count = count -1;
+    }
+  },
+  increaseProductQuantity: function (quantity, index) {
+    var count = quantity;
+    var product = this.$cartProducts.get(index);
+
+    while (count > 0) {
+      product.element(by.css('[data-e2e-id="cart-product-increase-quantity"]')).click();
       count = count -1;
     }
   }
