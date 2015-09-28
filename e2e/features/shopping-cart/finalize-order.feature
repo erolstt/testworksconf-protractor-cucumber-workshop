@@ -4,9 +4,9 @@ Feature: finalize the order
   So that I can consume the trainings I selected
 
   Scenario: notification that the order is finalized
-    Given I have 2 Behaviour Driven Development with Cucumber trainings in my cart
+    Given I have added 2 Behaviour Driven Development with Cucumber to my cart
     When I click the finalize button
-    Then I should receive a notification that my order is finalized
+    Then I should receive an alert that my order is finalized
 
   Scenario: after finalizing the order the cart should go back to its default state
     Given I have 2 Programming for Testers by Alan Richardson trainings in my cart

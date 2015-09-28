@@ -19,7 +19,6 @@ module.exports = function () {
     var product = home.getProduct(productname);
     var number = quantity - 1;
 
-
     product.quantityOptions.get(number).click();
     product.addToCartButton.click();
 
