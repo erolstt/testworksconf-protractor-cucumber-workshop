@@ -105,61 +105,6 @@ module.exports = function () {
     var product = cart.getProduct(0);
 
     expect(product.name.getText()).to.eventually.equals(productname);
-    expect(product.totalPrice.getText()).to.eventually.contains(price).and.notify(callback);  });
-
-  ///**
-  // * Scenario: remove product from shopping cart
-  // */
-  //
-  //this.Given(/^AA I have (.+) and (.+) trainings in my cart$/, function (productnameA, productnameB, callback) {
-  //  utils.bootstrap();
-  //
-  //  var productA = home.getProduct(productnameA);
-  //  productA.addToCartButton.click();
-  //
-  //
-  //  var productB = home.getProduct(productnameB);
-  //  productB.addToCartButton.click();
-  //
-  //  callback();
-  //});
-  //
-  //this.When(/^AB I remove the Unit Testing in Visual studio 2013 training from my cart$/, function (callback) {
-  //  utils.goToCart();
-  //
-  //  // Unit Testing in Visual studio 2013
-  //  //cart.removeProductFromCart(0);
-  //  //cart.getProductNew(productname).removeProduct.click();
-  //
-  //  callback();
-  //});
-  //
-  //this.Then(/^AC my cart should only contain the (.+) training$/, function (productname, callback) {
-  //  //expect(cart.$cartProducts.getText()).to.eventually.contains(productname).and.notify(callback);
-  //});
-
-  ///**
-  // *   Scenario: the shopping cart total price is adjusted when removing products from cart
-  // */
-  //
-  //this.Given(/^I have (.+) and (.+) and (.+) trainings in my cart$/, function (productnameA, productnameB, productnameC, callback) {
-  //  utils.bootstrap();
-  //
-  //  callback();
-  //});
-  //
-  //this.When(/^I remove the (.+) training from my cart/, function (productname, callback) {
-  //  var product = home.getProduct(productname);
-  //  var number = quantity - 1;
-  //
-  //  product.quantityOptions.get(number).click();
-  //  product.addToCartButton.click();
-  //
-  //  callback();
-  //});
-  //
-  //this.Then(/^the total price for my shopping cart should be (.+)/, function (price, callback) {
-  //  expect(home.$cartSummaryProductCount.getText()).to.eventually.equal(quantity).and.notify(callback);
-  //});
-
+    expect(product.totalPrice.getText()).to.eventually.contains(price).and.notify(callback);
+  });
 };
