@@ -44,6 +44,7 @@ module.exports = {
       product.element(by.css('[data-e2e-id="cart-product-increase-quantity"]')).click();
       count = count -1;
     }
-  }
-
+  },
+  $finalizeButton: element(by.css('[data-e2e-id="finalize-button"]')),
+  $orderPlacedAlert: element(by.css('[data-e2e-id="order-placed-alert"]'))
 };

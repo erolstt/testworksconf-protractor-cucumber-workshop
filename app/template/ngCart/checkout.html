@@ -1,8 +1,6 @@
-
 <div class="wrapper" ng-if="service=='http' || service == 'log'">
-    <button class="btn btn-primary btn-green" ng-click="checkout()" ng-disabled="!ngCart.getTotalItems()" ng-transclude>Checkout</button>
+    <button class="btn btn-primary btn-green" data-e2e-id="finalize-button" ng-click="checkout()" ng-disabled="!ngCart.getTotalItems()" ng-transclude>Checkout</button>
 </div>
-
 
 <div ng-if="service=='paypal'">
 
