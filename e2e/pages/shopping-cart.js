@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
+  $cartEmptyAlert: element(by.css('[data-e2e-id="cart-empty-alert"]')),
   $cartProductTotalPrice: element(by.css('[data-e2e-id="cart-product-total-price"]')),
   $cartRemoveProductsButton: element.all(by.css('[data-e2e-id="cart-remove-product"]')),
   removeProductFromCart: function (index) {

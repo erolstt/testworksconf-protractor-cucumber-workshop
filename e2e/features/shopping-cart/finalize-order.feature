@@ -9,7 +9,7 @@ Feature: finalize the order
     Then I should receive a notification that my order is finalized
 
   Scenario: after finalizing the order the cart should go back to its default state
-    Given I have 2 Programming for Testers by Alan Richardson trainings in my cart
+    Given I have added 2 Programming for Testers by Alan Richardson to my cart
     When I click the finalize button
     Then my cart should return to its default state
 
@@ -21,4 +21,4 @@ Feature: finalize the order
   Scenario: disable finalize button when cart is empty
     Given I have no products added to my shopping cart
     When I go to the shopping cart
-    Then the finalize button should be disabled
+    Then the finalize button should not be displayed
