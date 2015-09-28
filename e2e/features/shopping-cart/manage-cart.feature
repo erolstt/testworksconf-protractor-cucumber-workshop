@@ -19,9 +19,9 @@ Feature: manage shopping cart content
     Then the total price for the Advanced Selenium WebDriver trainings should be € 1,390.00
 
   Scenario: remove product from shopping cart
-    Given I have Test Driven Development (TDD) and Unit Testing in Visual studio 2013 trainings in my cart
-    When I remove the Unit Testing in Visual studio 2013 training from my cart
-    Then my cart should only contain the Test Driven Development (TDD) training
+    Given AA I have Test Driven Development (TDD) and Unit Testing in Visual studio 2013 trainings in my cart
+    When AB I remove the Unit Testing in Visual studio 2013 training from my cart
+    Then AC my cart should only contain the Test Driven Development (TDD) training
 
   Scenario: the shopping cart total price is adjusted when removing products from cart
     Given I have Test Driven Development (TDD) and Unit Testing in Visual studio 2013 and Testing 3.0 trainings in my cart

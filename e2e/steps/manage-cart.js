@@ -111,7 +111,7 @@ module.exports = function () {
   // * Scenario: remove product from shopping cart
   // */
   //
-  //this.Given(/^I have (.+) and (.+) trainings in my cart$/, function (productnameA, productnameB, callback) {
+  //this.Given(/^AA I have (.+) and (.+) trainings in my cart$/, function (productnameA, productnameB, callback) {
   //  utils.bootstrap();
   //
   //  var productA = home.getProduct(productnameA);
@@ -124,17 +124,17 @@ module.exports = function () {
   //  callback();
   //});
   //
-  //this.When(/^I remove the Unit Testing in Visual studio 2013 training from my cart/, function (callback) {
+  //this.When(/^AB I remove the Unit Testing in Visual studio 2013 training from my cart$/, function (callback) {
   //  utils.goToCart();
   //
   //  // Unit Testing in Visual studio 2013
-  //  cart.removeProductFromCart(0);
+  //  //cart.removeProductFromCart(0);
   //  //cart.getProductNew(productname).removeProduct.click();
   //
   //  callback();
   //});
   //
-  //this.Then(/^my cart should only contain the (.+) training/, function (productname, callback) {
+  //this.Then(/^AC my cart should only contain the (.+) training$/, function (productname, callback) {
   //  //expect(cart.$cartProducts.getText()).to.eventually.contains(productname).and.notify(callback);
   //});
 
